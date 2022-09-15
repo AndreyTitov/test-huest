@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bamboo</title>
+</head>
+<body>
+<iframe id="custom_iframe" style="height: 410px; width: 300px;"></iframe>
+
+<!--<script src="https://api.stage.bamboopayment.com/v1/Scripts/PWCheckout.js?key=Bnbp1PL7LkTnlP8XQinQiG_I56ONV7HQ"-->
+<!--        type="text/javascript"></script>-->
+<script src="https://testapi.siemprepago.com/v1/Scripts/PWCheckout.js?key=Bnbp1PL7LkTnlP8XQinQiG_I56ONV7HQ"
+        type="text/javascript"></script>
+<script type="text/javascript">
+  PWCheckout.SetProperties(
+    {
+      "name": "Mi tienda",
+      "email": "cliente@gmail.com",
+      "image": "http://mitienda.com/images/logocheckout.png",
+      "button_label": "Pagar #monto#",
+      "description": "Checkout de Mi tienda",
+      "currency": "USD",
+      "amount": "1843.21",
+      "lang": "ESP",
+      "form_id": "commerce_form",
+      "checkout_card": "1",
+      "autoSubmit": "true",
+      "email_edit": "false",
+      "iframeId": "custom_iframe",
+    });
+
+  PWCheckout.SetStyle(
+    {
+      "backgroundColor": "f2f2f2",
+      "buttonColor": "555555",
+      "buttonHoverColor": "777777",
+      "buttonTextColor": "ffffff",
+      "buttonTextHoverColor": "ffffff",
+      "inputBackgroundColor": "ffffff",
+      "inputTextColor": "767676",
+      "inputErrorColor": "ff0000",
+      "inputAddonBackgroundColor": "ffffff",
+      "labelColor": "494949"
+    }
+  );
+</script>
+</body>
+</html>
