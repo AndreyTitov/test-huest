@@ -8,7 +8,6 @@
     <title>Bamboo</title>
 </head>
 <body>
-<iframe id="custom_iframe" style="height: 410px; width: 300px;"></iframe>
 
 <!--<script src="https://api.stage.bamboopayment.com/v1/Scripts/PWCheckout.js?key=Bnbp1PL7LkTnlP8XQinQiG_I56ONV7HQ"-->
 <!--        type="text/javascript"></script>-->
@@ -46,6 +45,15 @@
       "labelColor": "494949"
     }
   );
+
+  var tokenRequest = {
+    PaymentMediaId: 5,
+    Email: "john@bamboopayment.com",
+    DocumentNumber: "12345672",
+    DocumentType: 2
+  };
+
+  PWCheckout.Iframe.GetToken(tokenRequest);
   console.log(PWCheckout);
   PWCheckout.OpenIframeNormal();
 </script>
